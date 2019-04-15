@@ -47,6 +47,7 @@ def get_all_teams(filepath):
     return all_teams
 
 
+# provides a single set of all transitive victors
 def collapse_transitive_layers(transitive_layers):
     return_set = set()
     for layer in transitive_layers:
@@ -54,6 +55,7 @@ def collapse_transitive_layers(transitive_layers):
     return return_set
 
 
+# transitive winners layer by layer
 def generate_transitive_victories(losing_dict, champion):
     all_transitive_teams = set()
 
@@ -92,6 +94,7 @@ def generate_transitive_victories(losing_dict, champion):
         previous_layer += 1
 
 
+# get size of each layer
 def get_transitive_lengths(transitive_layers):
     return_list = []
     for layer in transitive_layers:
